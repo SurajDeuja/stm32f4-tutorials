@@ -44,6 +44,7 @@
   * @{
   */
     
+
 #ifndef __STM32F4xx_H
 #define __STM32F4xx_H
 
@@ -6982,6 +6983,8 @@ typedef struct
 #define READ_REG(REG)         ((REG))
 
 #define MODIFY_REG(REG, CLEARMASK, SETMASK)  WRITE_REG((REG), (((READ_REG(REG)) & (~(CLEARMASK))) | (SETMASK)))
+
+#define assert_param(expr) ((void)0);
 
 /**
   * @}

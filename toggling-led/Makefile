@@ -80,11 +80,13 @@ $(OBJDIR):
 	mkdir -p $@
 
 clean:
-	rm -f $(OBJDIR)/$(PROJ_NAME).elf
-	rm -f $(OBJDIR)/$(PROJ_NAME).hex
-	rm -f $(OBJDIR)/$(PROJ_NAME).bin
-	rm -f $(OBJDIR)/$(PROJ_NAME).map
-	find $(OBJDIR) -type f -name '*.o' -print0 | xargs -0 -r rm
+	rm -rf build
+	rm -rf libraries
+	#rm -f $(OBJDIR)/$(PROJ_NAME).elf
+	#rm -f $(OBJDIR)/$(PROJ_NAME).hex
+	#rm -f $(OBJDIR)/$(PROJ_NAME).bin
+	#rm -f $(OBJDIR)/$(PROJ_NAME).map
+	#find $(OBJDIR) -type f -name '*.o' -print0 | xargs -0 -r rm
 
 # Dependdencies
 $(OBJDIR)/$(PROJ_NAME).elf: $(OBJS) | $(OBJDIR)
